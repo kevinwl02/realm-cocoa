@@ -31,9 +31,6 @@ let package = Package(
     name: "Realm",
     products: [
         .library(
-            name: "Realm",
-            targets: ["Realm"]),
-        .library(
             name: "RealmSwift",
             targets: ["Realm", "RealmSwift"]),
     ],
