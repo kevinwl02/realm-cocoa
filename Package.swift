@@ -28,14 +28,14 @@ let cxxSettings: [CXXSetting] = [
 ]
 
 let package = Package(
-    name: "RealmSwift",
+    name: "Realm",
     products: [
         .library(
-            name: "RealmSwift",
-            targets: ["RealmSwift"]),
+            name: "Realm",
+            targets: ["Realm"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/realm/realm-core", .exact(Version(coreVersionStr)!)),
+        .package(url: "https://github.com/realm/realm-core", .exact(Version(coreVersionStr)!))
     ],
     targets: [
       .target(
@@ -75,16 +75,6 @@ let package = Package(
             sources: ["Realm"],
             publicHeadersPath: "include",
             cxxSettings: cxxSettings
-        ),
-        .target(
-            name: "RealmSwift",
-            dependencies: ["Realm"],
-            path: "RealmSwift",
-            exclude: [
-                "Sync.swift",
-                "ObjectiveCSupport+Sync.swift",
-                "Tests",
-            ]
         ),
         .target(
             name: "RealmTestSupport",
