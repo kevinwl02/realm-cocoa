@@ -102,17 +102,6 @@ let package = Package(
                 .headerSearchPath(".."),
                 .headerSearchPath("../ObjectStore/src"),
             ]
-        ),
-        .testTarget(
-            name: "RealmObjcSwiftTests",
-            dependencies: ["Realm", "RealmTestSupport"],
-            path: "Realm/Tests/Swift"
-        ),
-        .testTarget(
-            name: "RealmSwiftTests",
-            dependencies: ["RealmSwift", "RealmTestSupport"],
-            path: "RealmSwift/Tests",
-            exclude: ["TestUtils.mm"]
         )
     ],
     cxxLanguageStandard: .cxx14
