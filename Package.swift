@@ -28,7 +28,7 @@ let cxxSettings: [CXXSetting] = [
 ]
 
 let package = Package(
-    name: "Realm",
+    name: "RealmSwift",
     products: [
         .library(
             name: "RealmSwift",
