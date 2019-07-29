@@ -32,7 +32,7 @@ let package = Package(
     products: [
         .library(
             name: "RealmSwift",
-            targets: ["Realm", "RealmSwift"]),
+            targets: ["RealmSwift"]),
     ],
     dependencies: [
         .package(url: "https://github.com/realm/realm-core", .exact(Version(coreVersionStr)!)),
